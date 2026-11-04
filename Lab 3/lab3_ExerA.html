@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Crumbs Bakery</title>
+</head>
+
+<body>
+
+    <!-- 1. HEADER SECTION -->
+    <div id="header">
+        <h1>
+            Campus Crumbs&reg;
+            <span> - Fresh Bakes, Happy Breaks!</span>
+        </h1>
+    </div>
+
+    <!-- 2. NAVIGATION SECTION -->
+    <div id="nav">
+        <a href="#header">Home</a> |
+        <a href="#content">About Us</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#order">Order Now</a>
+    </div>
+
+    <!-- 3. MAIN CONTENT SECTION -->
+    <div id="content">
+
+        <h2>Welcome to Campus Crumbs!</h2>
+
+        <!-- Introduction paragraph with inline elements -->
+        <p>
+            Welcome to <strong>Campus Crumbs</strong>, your favourite
+            <em>campus bakery</em>!
+            We offer <span style="color:brown;">freshly baked</span>
+            cupcakes and cakes made with love.
+            Enjoy our <mark>delicious treats</mark> every day!
+        </p>
+
+        <h2>Our Bakery</h2>
+
+        <p>
+            We provide affordable and delicious bakery products
+            for students and staff. Enjoy our sweet treats
+            during your study breaks!
+        </p>
+
+        <!-- 4. ORDER FORM SECTION -->
+        <div id="order">
+
+            <h2>Customer Order Form</h2>
+
+            <form action="#" method="post">
+
+                <!-- Customer information -->
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName"
+                       name="customerName"
+                       placeholder="Enter your name"
+                       required autofocus>
+                <br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <!-- Pickup date and time -->
+                <label for="date">Pick-up Date:</label>
+                <input type="date" id="date" name="date">
+                <br><br>
+
+                <label for="time">Pick-up Time:</label>
+                <input type="time" id="time" name="time">
+                <br><br>
+
+                <!-- Flavour selection using datalist -->
+                <label for="flavour">Choose Flavour:</label>
+                <input list="flavours" id="flavour" name="flavour">
+
+                <datalist id="flavours">
+                    <option value="Chocolate">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Red Velvet">
+                </datalist>
+                <br><br>
+
+                <!-- Icing colour -->
+                <label for="colour">Icing Colour:</label>
+                <input type="color" id="colour" name="colour">
+                <br><br>
+
+                <!-- Sweetness level -->
+                <label for="sweetness">Sweetness Level (1-5):</label>
+                <input type="range" id="sweetness"
+                       name="sweetness"
+                       min="1" max="5" step="1">
+                <br><br>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit Order">
+
+            </form>
+        </div>
+
+        <!-- 5. PRICE CALCULATOR SECTION -->
+        <div id="calculator">
+
+            <h2>Price Calculator</h2>
+
+            <form oninput="this.elements.total.value =
+                Number(this.elements.cupcakes.value) * 3 +
+                Number(this.elements.cakeSlices.value) * 5">
+
+                <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+                <input type="number" id="cupcakes"
+                       name="cupcakes" min="0" value="0">
+                <br><br>
+
+                <label for="cakeSlices">Cake Slices (RM 5.00 each):</label>
+                <input type="number" id="cakeSlices"
+                       name="cakeSlices" min="0" value="0">
+                <br><br>
+
+                <label>Total Price: RM </label>
+
+                <output name="total"
+                        for="cupcakes cakeSlices">0</output>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- 6. SIDEBAR SECTION -->
+    <div id="sidebar">
+
+        <h2>Price List</h2>
+
+        <ul>
+            <li>Cupcake - RM 3.00</li>
+            <li>Chocolate Cake - RM 5.00</li>
+            <li>Vanilla Cake - RM 5.00</li>
+            <li>Red Velvet Cake - RM 5.00</li>
+        </ul>
+
+        <p>Orders &gt; 10 pieces get a free drink!</p>
+
+        <p>Special offer: Buy 5 cupcakes and get 1 free!</p>
+
+        <p>All prices include&nbsp;fresh ingredients.</p>
+
+        <p>Our bakery brand is Campus Crumbs&reg;.</p>
+
+    </div>
+
+    <!-- 7. FOOTER SECTION -->
+    <div id="footer">
+
+        <p>
+            Contact us: campuscrumbs@email.com
+        </p>
+
+        <p>
+            &pound; Special promotions available!
+        </p>
+
+        <p>
+            &copy; 2026 Campus Crumbs Bakery. All Rights Reserved.
+        </p>
+
+    </div>
+
+</body>
+</html>
